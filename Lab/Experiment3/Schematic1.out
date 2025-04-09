@@ -1,0 +1,114 @@
+
+**** 03/22/25 16:35:27 *********** Evaluation PSpice (Nov 1999) **************
+
+ * D:\_Study\CSE\CSE-209\Experiment3\Schematic1.sch
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+* Schematics Version 9.1 - Web Update 1
+* Sat Mar 22 16:35:27 2025
+
+
+
+** Analysis setup **
+.OP 
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "Schematic1.net"
+
+**** INCLUDING Schematic1.net ****
+* Schematics Netlist *
+
+
+
+I_I3         $N_0001 $N_0002 DC 3A  
+R_R4         0 $N_0002  10ohm  
+R_R3         0 $N_0001  10ohm  
+R_R2         $N_0001 $N_0002  30ohm  
+R_R1         $N_0003 $N_0001  20ohm  
+V_V1         $N_0003 0 10V
+I_I2         $N_0002 0 DC -10A  
+
+**** RESUMING Schematic1.cir ****
+.INC "Schematic1.als"
+
+
+
+**** INCLUDING Schematic1.als ****
+* Schematics Aliases *
+
+.ALIASES
+I_I3            I3(+=$N_0001 -=$N_0002 )
+R_R4            R4(1=0 2=$N_0002 )
+R_R3            R3(1=0 2=$N_0001 )
+R_R2            R2(1=$N_0001 2=$N_0002 )
+R_R1            R1(1=$N_0003 2=$N_0001 )
+V_V1            V1(+=$N_0003 -=0 )
+I_I2            I2(+=$N_0002 -=0 )
+.ENDALIASES
+
+
+**** RESUMING Schematic1.cir ****
+.probe
+
+
+.END
+
+**** 03/22/25 16:35:27 *********** Evaluation PSpice (Nov 1999) **************
+
+ * D:\_Study\CSE\CSE-209\Experiment3\Schematic1.sch
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+($N_0001)    4.2857                   ($N_0002)   98.5710                       
+
+($N_0003)   10.0000                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -2.857E-01
+
+    TOTAL POWER DISSIPATION   2.86E+00  WATTS
+
+
+**** 03/22/25 16:35:27 *********** Evaluation PSpice (Nov 1999) **************
+
+ * D:\_Study\CSE\CSE-209\Experiment3\Schematic1.sch
+
+
+ ****     OPERATING POINT INFORMATION      TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+
+
+          JOB CONCLUDED
+
+          TOTAL JOB TIME            0.00
+

@@ -1,0 +1,13 @@
+* Schematics Netlist *
+
+
+
+G_G1         5 2 b 0 0.5
+R_R5         0 b  8  
+V_V2         x 0 10V
+R_R3         0 6  4  
+R_R2         6 5  16  
+R_R1         y 2  8  
+R_R4         3 b  20  
+H_H1         2 3 VH_H1 0.5
+VH_H1        x y 0V

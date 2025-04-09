@@ -1,0 +1,22 @@
+* D:\_Study\CSE\CSE-209\Experiment4\Figure2\Schematic1.sch
+
+* Schematics Version 9.1 - Web Update 1
+* Thu Mar 27 21:37:28 2025
+
+
+
+** Analysis setup **
+.OP 
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "Schematic1.net"
+.INC "Schematic1.als"
+
+
+.probe
+
+
+.END
